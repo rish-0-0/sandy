@@ -1,0 +1,37 @@
+{
+  "name": "sandy",
+  "version": "0.0.0",
+  "description": "Programming Language similar to PythonScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests/index.js",
+    "build": "npx rollup -c",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rish-0-0/sandy.git"
+  },
+  "keywords": [
+    "Programming",
+    "Language",
+    "interpreted",
+    "WASM"
+  ],
+  "author": "Rishabh Anand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rish-0-0/sandy/issues"
+  },
+  "homepage": "https://github.com/rish-0-0/sandy#readme",
+  "devDependencies": {
+    "@rollup/plugin-wasm": "^5.1.0",
+    "assemblyscript": "^0.14.12",
+    "rollup": "^2.28.2"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.14.12"
+  }
+}
